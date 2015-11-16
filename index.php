@@ -9,34 +9,17 @@ if( isset($_SESSION["errorMessages"])) {
     unset($_SESSION["errorMessages"]);
 }
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Sessions Login</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-</head>
-<body>
+<?php include('templates/header.php'); ?>
 <main class="center-div">
-<h1>Secure Login Session</h1>
-<p><i>--Authorized access only--</i></p>
-
+<h1>Login</h1>
 <form method="POST" action="./session-authorize.php">
     <input type="text" name="username" id="username" placeholder="Enter username"/>
-    <label for="username">Username</label><br>
-    <input type="password" name="password" id="password" placeholder="--bcit"/>
-    <label for="password">Password</label>    
-    <p class="register"><a href="./add_user.php"><i><i class="fa fa-arrow-circle-o-right"></i> Add student to database</i></a></p>
-    <label for="stylesheet">Stylesheet:</label>
-    <select name="stylesheet" id="stylesheet">
-        <option name="style" value='./css/style.css' >style.css</option>
-        <option name="blue" value='./css/blue.css' >blue.css</option>
-        <option name="yellow" value='./css/green.css' >green.css</option>
-    </select>
+    <input type="password" name="password" id="password" placeholder="Enter password (bcit)"/>
 <br>
     <input type="submit" id="submit" value="Submit" />
-</form>    
-<a href="https://github.com/kwignes" target="_blank"><i class="fa fa-github"></i></a>
+    <p class="register"><a href="./add_user.php"><i><i class="fa fa-arrow-circle-o-right"></i> Add student to database</i></a></p>
+</form>
+<div class="github"><a href="https://github.com/kwignes/secure_session_login" target="_blank"><i class="fa fa-github"></i></a></div>    
 </main>
 </body>
 </html>

@@ -5,22 +5,15 @@ include("./session-timeout.php");
 <?php
 include("./security-guard.php");
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Sessions Page 1</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <?php echo '<link rel="stylesheet" href="'.$_SESSION['stylesheet'].'">' ?>
-</head>
-<body>
+<?php include('templates/header.php'); ?>
+
 <main class="center-div">
 <?php
     echo "<p class='welcome'>" . ucfirst($_SESSION["username"]) ."</p>";
 ?>
 <p class="logout"><i class="fa fa-power-off"></i> <a href="./session-logout.php">Logout</a></p>
 
-<h1 class="cpanel">Profile</h1>
+<h2>Profile</h2>
 <img src="./img/defaultpic.png" alt="Default Profile Picture" class="profile-pic">
 <p><i class="fa fa-cog"></i><a href="./page01.php"> CPanel</a></p> 
 <p><i class="fa fa-database"></i> <a href="./table_students.php"> Manage Database</a></p> 

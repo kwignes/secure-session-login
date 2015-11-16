@@ -1,14 +1,8 @@
 <?php
 include("./session-timeout.php");
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Delete User</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-</head>
-<body>
+<?php include('templates/header.php'); ?>
+
 <main class="center-div">
 
 <?php
@@ -17,7 +11,7 @@ include("./session-timeout.php");
 
 <p class="logout"><i class="fa fa-power-off"></i> <a href="./session-logout.php">Logout</a></p>
 
-<h1 class="cpanel">Delete User</h1>
+<h2>Delete User</h2>
 
 <?php
 

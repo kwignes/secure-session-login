@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Sessions Page 1</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-</head>
-<body>
+<?php include('templates/header.php'); ?>
+
 <main class="center-div">
 
 <h1 class="cpanel">Session Timeout</h1>

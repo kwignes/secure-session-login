@@ -42,11 +42,6 @@ if(trim($_POST["password"]) == VALID_PASSWORD ) {
     $arrayOfErrorMessages[] = "<p class='error'>Password is incorrect: (hint: its 'bcit')</p>";
 }
 
-if(isset($_POST['stylesheet'])) {
-    $_SESSION['stylesheet'] = $_POST['stylesheet'];
-}
-
-
 if( count($arrayOfErrorMessages) == 0) {
     /* user is ok, log them in */
     $secureID = session_id() . $_SERVER["REMOTE_ADDR"] . "ssjdnfksjdnfkjs" .$_SERVER["HTTP_USER_AGENT"];

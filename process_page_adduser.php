@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Add User</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-</head>
-<body>
+<?php include('templates/header.php'); ?>
+
 <main class="center-div">
-<h1 class="cpanel">Register</h1>
+<h2>Register</h2>
 
 <?php
 

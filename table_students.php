@@ -5,6 +5,7 @@ include("./session-timeout.php");
 <!DOCTYPE html>
 <head>
 	<title>PHP MySQL</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="table.css" />
 
 		<style>

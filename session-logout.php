@@ -2,16 +2,10 @@
 session_start();
 ob_start();
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Sessions Logout</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-</head>
-<body>
+<?php include('templates/header.php'); ?>
+
 <main class="center-div">
-<h1>Sessions Logout</h1>
+<h2>Logout</h2>
 
 <p>You have successfully logged out.</p>
 <?php

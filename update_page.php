@@ -1,14 +1,8 @@
 <?php
 include("./session-timeout.php");
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Update User</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-</head>
-<body>
+<?php include('templates/header.php'); ?>
+
 <main class="center-div">
 
 <?php
@@ -17,7 +11,7 @@ include("./session-timeout.php");
 
 <p class="logout"><i class="fa fa-power-off"></i> <a href="./session-logout.php">Logout</a></p>
 
-<h1 class="cpanel">Update User</h1>
+<h2>Update User</h2>
 
 <?php
 
@@ -32,12 +26,9 @@ if(isset($_GET["id"])){
 ?>
 
 <form method="POST" action="process_page_update.php">
-    <input type="text" name="id" id="id" />
-    <label for="id">Student Number:</label>
-    <input type="text" name="firstname" id="firstname" />
-    <label for="firstname">First Name:</label>
-    <input type="text" name="lastname" id="lastname" />
-    <label for="lastname">Last Name:</label>
+    <input type="text" name="id" id="id" placeholder="Student ID" />
+    <input type="text" name="firstname" id="firstname" placeholder="Firstname"/>
+    <input type="text" name="lastname" id="lastname" placeholder="Lastname"/>
     <input type="hidden" name="originalID" value="<?php echo $id ?>"><br>
     <input type="submit" id="submit" value="Submit" /><br />
 </form>

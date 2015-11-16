@@ -1,5 +1,6 @@
 body {
-    font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background: #eee;
 }
 
 a {
@@ -7,9 +8,20 @@ a {
     color: #777;
 }
 
+.center-div p {
+  padding: 1em 0;
+}
+
 a:hover {
     color: #555;
     transition: .3s ease;
+}
+
+.github {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #777;
 }
 
 .fa-github:hover {
@@ -18,18 +30,16 @@ a:hover {
 
 .center-div
 {
-  position: absolute;
   margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 380px;
-  height: 300px;
-  background-color: #f3f2ef;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  background-color: #E1E1E1;
   border-radius: 3px;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   border: 1px solid #ccc;
+  margin-top: 8em;
+  position: relative;
 }
 
 #password {
@@ -41,17 +51,8 @@ a:hover {
 }
 
 #submit:hover {
-    background-color: #dedede;
-    border: 1px solid #777;
+    background-color: #F18C24;
     transition: .3s ease;
-}
-
-.fa-github {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 20px;
-    color: #777;
 }
 
 .error {
@@ -78,17 +79,31 @@ a:hover {
     float: right;
 }
 
-main {
-    margin: 0 auto;
-    width: 960px;
-}
-
 .blue {
     color: blue;
 }
 
 h1 {
     clear: both;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #23313E;
+    padding: 1em;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: 2px;
+}
+
+h2 {
+    clear: both;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: #000;
+    padding: 1em;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: 2px;  
 }
 
 .cpanel {
@@ -112,21 +127,91 @@ h1 {
 
 .register {
   font-size: 14px;
+  margin: 1em 0;
 }
 
 /* Form styles */
 
-#id, #firstname, #lastname, #submit {
+#stylesheet {
+  margin-top: 1.5em;
+  border: 1px solid #eee;
+  color: #777;
+  padding: 0 0 2px 0;
+}
+
+form {
+    margin: 1em 0 0 0;
 }
 
 #submit {
-    margin-top: 15px;
+    margin-top: 1.5em;
+    background-color: #F27025;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;  
+    padding: .5em;
 }
 
 
 input {
-    border: 1px solid #ccc;
+    border: 1px solid #eee;
     margin-top: 3px;
+}
+
+input[type=text], textarea,
+input[type=password], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=text]:focus, textarea:focus,
+input[type=password]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(241, 140, 36, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(241, 140, 36, 1);
+}
+
+
+#username,
+#password {
+  width: 100%;
+  padding: 1em;
+  border-radius: 20px;
+  background-color: #CACACA;
+}
+
+::-webkit-input-placeholder {
+   color: #444;
+   font-weight: bold;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #444; 
+   font-weight: bold;    
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #444; 
+   font-weight: bold;    
+}
+
+:-ms-input-placeholder {  
+   color: #444; 
+   font-weight: bold;
+
+}
+
+@media screen and (max-width: 580px) {
+  .center-div {
+    margin-top: 0;
+  }
 }
 
 
