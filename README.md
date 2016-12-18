@@ -1,6 +1,6 @@
 # Secure Session Login
 
-<p> A secure login/logout form with sessions and timeouts to protect from unauthorized access.
+<p> A secure login/logout form with sessions to protect from unauthorized access.
 
 <b>PHP</b> and <b>MySQL</b> was used to create the form and administration interface.</p>
 
