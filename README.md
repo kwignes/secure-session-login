@@ -2,7 +2,7 @@
 
 <p> A secure login/logout form with sessions to protect from unauthorized access.
 
-<b>PHP</b> and <b>MySQL</b> was used to create the form and administration interface. <a href="kwignes.htpwebdesign.ca/session_login">Secure Login</a></p>
+<b>PHP</b> and <b>MySQL</b> was used to create the form and administration interface. <a href="http://kwignes.htpwebdesign.ca/session_login">Secure Login</a></p>
 
 ## Setup
 
