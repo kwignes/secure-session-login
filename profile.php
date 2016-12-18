@@ -14,8 +14,8 @@ include("./security-guard.php");
 <p class="logout"><i class="fa fa-power-off"></i> <a href="./session-logout.php">Logout</a></p>
 
 <h2>Profile</h2>
-<img src="./img/defaultpic.png" alt="Default Profile Picture" class="profile-pic">
-<p><i class="fa fa-cog"></i><a href="./page01.php"> CPanel</a></p> 
+<img src="http://kwignes.htpwebdesign.ca/profile.png" alt="Default Profile Picture" class="profile-pic">
+<p><i class="fa fa-cog"></i><a href="./page01.php"> Dashboard</a></p> 
 <p><i class="fa fa-database"></i> <a href="./table_students.php"> Manage Database</a></p> 
 
 <?php
@@ -30,5 +30,6 @@ if(isset($_SESSION['timeout']) ) {
 $_SESSION['timeout'] = time();
 ?>
 </main>
+<?php include('templates/footer.php'); ?>
 </body>
 </html>

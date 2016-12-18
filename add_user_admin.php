@@ -1,6 +1,9 @@
 <?php
 include("./session-timeout.php");
 ?>
+<?php
+include("./security-guard.php");
+?>
 <?php include('templates/header.php'); ?>
 
 <main class="center-div">
@@ -24,7 +27,7 @@ include("./session-timeout.php");
 </form>
 
 <p class="back"><a href="./table_students.php"><i class="fa fa-angle-double-left"></i> Return to Table</a></p>
-
 </main>
+<?php include('templates/footer.php'); ?>
 </body>
 </html>

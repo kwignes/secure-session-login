@@ -30,9 +30,9 @@ $query  = "INSERT INTO students (id, firstname, lastname) VALUES('".$id."','".$f
 $result = $mysqli->query( $query );
 
 if($result){
-    echo /*$mysqli->affected_rows.*/" Thank you,<br>" . $mysqli->affected_rows. " student has been added to the database. <i class='fa fa-check'></i> <br><br><a href='./index.php'><i class='fa fa-power-off'></i> Exit</a>";
+    echo /*$mysqli->affected_rows.*/"<p>Thank you,</p>" . $mysqli->affected_rows. " student has been added to the database. <i class='fa fa-check'></i> <br><br><a href='./table_students.php'><i class='fa fa-power-off'></i> Return to Table</a>";
 } else {
-    echo "An error occured. The item was not added. <br><br><a href='./index.php'><i class='fa fa-power-off'></i> Exit</a>";
+    echo "An error occured. The item was not added. <br><br><a href='./page01.php'><i class='fa fa-power-off'></i> Return to cPanel</a>";
 }
 
 /* close MySQL connection */
@@ -41,5 +41,6 @@ $mysqli->close();
 ?>
 
 </main>
+<?php include('templates/footer.php'); ?>
 </body>
 </html>

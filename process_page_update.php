@@ -1,6 +1,7 @@
 <?php
 include("./session-timeout.php");
 ?>
+
 <?php include('templates/header.php'); ?>
 
 <main class="center-div">
@@ -53,5 +54,6 @@ $mysqli->close();
 
 ?>
 </main>
+<?php include('templates/footer.php'); ?>
 </body>
 </html>

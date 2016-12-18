@@ -2,6 +2,7 @@
 <?php include('templates/header.php'); ?>
 
 <main class="center-div">
+
 <h2>Register</h2>
 
 <form method="POST" action="process_page_adduser.php">
@@ -14,9 +15,10 @@
     <input type="submit" id="submit" value="Submit" /><br>
 </form>
 
-<p class="back"><a href="./index.php"><i class="fa fa-angle-double-left"></i> Return to Login</a></p>
+<p class="back"><a href="./page01.php"><i class="fa fa-angle-double-left"></i> Return to Dashboard</a></p>
 
 </main>
+<?php include('templates/footer.php'); ?>
 </body>
 </html>
 

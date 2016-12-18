@@ -3,7 +3,7 @@
 session_start();
 ob_start();
 
-const VALID_PASSWORD = "bcit";
+const VALID_PASSWORD = "session";
 
 //hold all error messages
 $arrayOfErrorMessages = array();
@@ -12,7 +12,7 @@ if( empty($_POST["username"])) {
     echo "<p>Please fill in the username</p>";
 
     //add the error message to the next available index
-    $arrayOfErrorMessages[] = "<p class='error'>Please fill in the username</p>";
+    $arrayOfErrorMessages[] = "<span class='error'>Please fill in the username</span>";
 
 } elseif(strlen($_POST["username"]) < 2 ) {
 
@@ -20,26 +20,26 @@ if( empty($_POST["username"])) {
     $arrayOfErrorMessages[] = "<p class='error'>The username needs to be at least 2 characters long.</p>";
 
 } else {
-    echo "<p>Username valid</p>";
+    echo "<span>Username valid</span>";
 }
 
 if( empty($_POST["password"]) ){
-    echo "<p class='error'>Please fill in the password</p>";
+    echo "<span class='error'>Please fill in the password</span>";
 
     //add the error message to the next available index
-    $arrayOfErrorMessages[] = "<p class='error'>Please fill in the password</p>";
+    $arrayOfErrorMessages[] = "<span class='error'>Please fill in the password</span>";
 
 } else {
     echo "<p>Password valid</p>";
 }
 
 if(trim($_POST["password"]) == VALID_PASSWORD ) {
-    echo "<p>Password is correct</p>";
+    echo "<span>Password is correct</span>";
 } else {
-    echo "<p class='error'>Password is incorrect: (hint: its 'bcit')</p>";
+    echo "<span class='error'>Password is incorrect: (hint: its 'session')</span>";
 
     //add the error message to the next available index
-    $arrayOfErrorMessages[] = "<p class='error'>Password is incorrect: (hint: its 'bcit')</p>";
+    $arrayOfErrorMessages[] = "<span class='error'>Password is incorrect: (hint: its 'session')</span>";
 }
 
 if( count($arrayOfErrorMessages) == 0) {
@@ -52,7 +52,7 @@ if( count($arrayOfErrorMessages) == 0) {
     die();
 
 } else {
-    echo "<p>At least 1 error was detected</p>";
+    echo "<span>At least 1 error was detected</span>";
     $_SESSION["errorMessages"] = $arrayOfErrorMessages;
     //if errors detected, send user back to the form...
     header("Location: index.php");

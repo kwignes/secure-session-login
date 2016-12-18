@@ -46,6 +46,7 @@ else {
 $mysqli->close();
 ?>
 </main>
+<?php include('templates/footer.php'); ?>
 </body>
 </html>
 

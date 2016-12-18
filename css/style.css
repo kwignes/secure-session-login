@@ -1,11 +1,12 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background: #eee;
+  background: #F0F4F7;
+  color: #333;
 }
 
 a {
     text-decoration: none;
-    color: #777;
+    color: #4078c0;
 }
 
 .center-div p {
@@ -17,13 +18,6 @@ a:hover {
     transition: .3s ease;
 }
 
-.github {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  color: #777;
-}
-
 .fa-github:hover {
     color: #000;
 }
@@ -32,14 +26,35 @@ a:hover {
 {
   margin: auto;
   width: 100%;
-  max-width: 520px;
-  height: auto;
-  background-color: #E1E1E1;
+  max-width: 720px;
+  background-color: #fff;
   border-radius: 3px;
-  padding: 20px 20px 0 20px;
+  padding: 20px;
   border: 1px solid #ccc;
-  margin-top: 8em;
   position: relative;
+  text-align: center;
+}
+
+.center-div h2 {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.fa-check {
+  color: green !important;
+}
+
+.center-div .fa {
+  color: #333;
+}
+
+.center-div {
+  font-size: 1.2em;
+}
+
+.center-div span {
+  display: block;
+  margin-top: 6px;
 }
 
 #password {
@@ -55,55 +70,106 @@ a:hover {
     transition: .3s ease;
 }
 
-.error {
+.error, .error1 {
     color: red;
+    margin-top: 1.5em;
 }
 
-.error1 {
-    color: red;
-    font-size: 10px;
+footer {
+    padding: 2em 0;
+   text-align: center;;
 }
 
-.footer {
-    color: #555;
-    font-size: 10px;
-    text-align: center;
+footer .fa {
+  color: #999;
+  font-size: 2em;
+  transition: ease 0.4s;
 }
 
-.welcome {
-    font-size: 16px;
+footer .fa:hover {
+  color: #777;
+}
+
+.admin-home {
     float: left;
 }
 
-.logout {
-    float: right;
-}
-
-.blue {
-    color: blue;
+.userName {
+    color: #C08840;
 }
 
 h1 {
-    clear: both;
     text-transform: uppercase;
     font-size: 1.5em;
     color: #fff;
-    background-color: #23313E;
-    padding: 1em;
-    text-align: center;
     margin: 0 auto;
     letter-spacing: 2px;
+    float: left;
+}
+
+h1 a, h1 a:hover {
+  color: #fff;
 }
 
 h2 {
     clear: both;
     text-transform: uppercase;
     font-size: 1.5em;
-    color: #000;
     padding: 1em;
     text-align: center;
     margin: 0 auto;
     letter-spacing: 2px;  
+}
+
+header {
+    background-color: #49525B;
+    padding: 2em 0;
+    overflow: auto;
+}
+
+nav {
+  float: right;
+  margin-top: 5px;
+}
+
+nav a {
+  padding: 0 1em;
+  color: #fff;
+}
+
+nav a:hover {
+  color: #eee;
+}
+
+@media screen and (max-width: 580px) {
+  nav, h1 {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  h1 {
+    padding-bottom: 1em;
+  }
+}
+
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+
+header p {
+    float: right;
+    padding: 5px;
+}
+
+header p a {
+        color: #fff;
+}
+
+main {
+  clear: both;
+  padding: 2em 0;
 }
 
 .cpanel {
@@ -121,13 +187,8 @@ h2 {
 }
 
 .profile-pic {
-    width: 50px;
-    height: 50px;
-}
-
-.register {
-  font-size: 14px;
-  margin: 1em 0;
+    width: 150px;
+    height: 150px;
 }
 
 /* Form styles */
@@ -140,7 +201,7 @@ h2 {
 }
 
 form {
-    margin: 1em 0 0 0;
+    margin: 1em;
 }
 
 #submit {
@@ -165,7 +226,7 @@ input[type=password], textarea {
   -ms-transition: all 0.30s ease-in-out;
   -o-transition: all 0.30s ease-in-out;
   outline: none;
-  padding: 3px 0px 3px 3px;
+  padding: 8px;
   margin: 5px 1px 3px 0px;
   border: 1px solid #DDDDDD;
 }
@@ -184,7 +245,7 @@ input[type=password]:focus, textarea:focus {
   width: 100%;
   padding: 1em;
   border-radius: 20px;
-  background-color: #CACACA;
+  background-color: #F7F7F7;
 }
 
 ::-webkit-input-placeholder {
@@ -215,3 +276,50 @@ input[type=password]:focus, textarea:focus {
 }
 
 
+/* Table styles */
+
+table {
+  margin: 0 auto;
+  position: relative;
+}
+
+table td {
+ padding: 20px;
+ width: 150px; 
+}
+
+.red {
+    color: #777;
+    font-size: 18px;
+}
+
+.add {
+    font-size: 22px;
+    color: green;
+    border: 1px dotted #ccc;
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+th {
+    font-size: 24px;
+        padding: 6px 4px;
+        color: #38424B;
+        font-weight: bold;
+}
+
+td {
+    padding: 6px 4px;
+}
+
+
+.fa-angle-double-left {
+    color: 000;
+}
+
+.fa-check {
+    color: green;
+}

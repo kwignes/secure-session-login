@@ -1,33 +1,49 @@
 # secure-session-login
 
-<p> A secure login/logout form with sessions and timeouts to protect database from unauthorized access.
+<p> A secure login/logout form and database with sessions and timeouts to protect from unauthorized access.
 <b>PHP</b> and <b>MySQL</b> was used to create the form and administration interface.</p>
 
-<p>1. Download ZIP and extract to localhost.</p>
-<p>2. Open <b>phpMyAdmin</b> and create a new database.</p>
+<p>1. Clone files to localhost.</p>
+<p>2. Create a new database in phpMyAdmin.</p>
+<p>2. Add a new global user granted all privileges.</p>
 <p>3. Connect to the database by creating a dbinfo.php file and add in your information.</p>
-const DB_HOST	 = "";			
-const DB_USER	 = "";<br>
-const DB_PASS	= "";<br>
-const DB_NAME = "";	
+const DB_HOST = "localhost";			
+const DB_USER = "(user)";<br>
+const DB_PASS = "(generated password)";<br>
+const DB_NAME = "(database name)";	
 
-<h2>Contents</h2>
+Form - index.php
+Dashboard Control Panel - page01.php
 
-index.php<br>
-add_user.php<br>
-add_user_admin.php<br>
-process_page_adduser.php<br>
-process_page_adduser_admin.php<br>
-process_page_delete.php<br>
-process_page_update.php<br>
-profile.php<br>
-session-authorize.php<br>
-session-logout.php<br>
-session-timeout.php<br>
-session-timeout-message.php<br>
-update_page.php<br>
-page01.php<br>
-table_students.php<br>
+User Profile - profile.php
+Add Student - add_user.php
+Manage Database - table_students.php
+
+## Database Table
+
+Add User - add_user_admin.php
+Update User - update_page.php
+Delete User - delete_page.php
+
+## Security
+
+Validations - session-authorize.php
+Terminate session and prevent brute force - security-guard.php
+
+## Process pages (Acknowledge successful operation)
+
+process_page_adduser.php
+process_page_adduser_admin.php
+process_page_delete.php
+process_page_update.php
+
+
+
+
+
+
+
+
 
 <i>Extra layer of security to prevent brute force by adding mixed characters that match authorize page</i><br> 
 security-guard.php<br>

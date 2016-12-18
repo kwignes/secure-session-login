@@ -1,6 +1,7 @@
 <?php
 include("./session-timeout.php");
 ?>
+
 <?php include('templates/header.php'); ?>
 
 <main class="center-div">
@@ -8,8 +9,6 @@ include("./session-timeout.php");
 <?php
     echo "<p class='welcome'>Admin: " . "<a class='blue' href='./profile.php'>" . ucfirst($_SESSION["username"]). "</a>" ."</p>";
 ?>
-
-<p class="logout"><i class="fa fa-power-off"></i> <a href="./session-logout.php">Logout</a></p>
 
 <h2>Update User</h2>
 
@@ -20,7 +19,7 @@ require_once("dbinfo.php");
 //record specific information via GET
 if(isset($_GET["id"])){
     $id = $_GET["id"];
-    echo "<p class='red'>" . "Update User: " . $id .  "</p>" ;
+    echo "<p>" . $id .  "</p>" ;
 }
 
 ?>
@@ -36,5 +35,6 @@ if(isset($_GET["id"])){
 <p class="back"><a href="./table_students.php"><i class="fa fa-angle-double-left"></i> Return to table</a></p>
 
 </main>
+<?php include('templates/footer.php'); ?>
 </body>
 </html>

@@ -2,6 +2,9 @@
 session_start();
 ob_start();
 ?>
+<?php
+include("./security-guard.php");
+?>
 <?php include('templates/header.php'); ?>
 
 <main class="center-div">
@@ -20,5 +23,6 @@ session_destroy();
 ?>
 <p><a href="./index.php"><i class="fa fa-power-off"></i> Exit</a></p>
 </main>
+<?php include('templates/footer.php'); ?>
 </body>
 </html>

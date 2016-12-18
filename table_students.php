@@ -2,29 +2,13 @@
 include("./session-timeout.php");
 ?>
 
-<!DOCTYPE html>
-<head>
-	<title>PHP MySQL</title>
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="table.css" />
+<?php
+include("./security-guard.php");
+?>
 
-		<style>
-		tr:nth-child(odd)		{ background-color:#E7E7E7; }
-		tr:nth-child(even)		{ background-color:#fff; }
-		</style>
-		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-</head>
-<body>
+<?php include('templates/header.php'); ?>
+
 <main>
-
-	<header>
-		<h1>Student Database</h1>
-		<?php
-    	echo "<p class='welcome'>Admin: " . "<a class='blue' href='./profile.php'>" . ucfirst($_SESSION["username"]). "</a>" ."</p>";
-		?>
-			<p class="logout"><i class="fa fa-power-off"></i> <a href="./session-logout.php">Logout</a></p>
-			<p><i class="fa fa-cog"></i> <a href="./page01.php">CPanel</a></p> 
-	</header>
 <?php
 
 require_once("dbinfo.php");
@@ -58,9 +42,7 @@ echo "</table>";
 //close connection
 $mysqli->close();
 ?>
-<footer>
-	<p>&copy; Kris Wignes<br>For educational use only</p>
-</footer>
 </main>
+<?php include('templates/footer.php'); ?>
 </body>
 </html>
